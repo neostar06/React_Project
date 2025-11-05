@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  /* Define the --color-background variable */
+  --color-background: oklch(20% 0.05 280); /* Example OKLCH value for a dark background */
+  --color-foreground: oklch(98% 0.01 280); /* Example OKLCH for a light text color */
+  --color-border: oklch(84.04% 0.015 289.47);
+  /* Or use a hex code */
+  /* --color-background: #0d0d10; */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+
+
+#root{
+  background-color: hsl(218, 33%, 16%);
+}
+
+body{
+  background-color: hsl(218, 33%, 16%);
+}
+
+@layer base {
+  :root {
+    --background: 217 33% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 20%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 174 60% 51%;
+    --primary-foreground: 217 33% 17%;
+
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 25%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 174 60% 51%;
+    --accent-foreground: 217 33% 17%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 30%;
+    --input: 217 33% 25%;
+    --ring: 174 60% 51%;
+
+    --radius: 0.75rem;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(174 60% 51%), hsl(174 60% 41%));
+    --gradient-dark: linear-gradient(180deg, hsl(217 33% 17%), hsl(217 33% 12%));
+    
+    --shadow-soft: 0 4px 20px -2px hsl(217 33% 10% / 0.5);
+    --shadow-hover: 0 8px 30px -4px hsl(174 60% 51% / 0.3);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 217 33% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 20%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 174 60% 51%;
+    --primary-foreground: 217 33% 17%;
+
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 25%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 174 60% 51%;
+    --accent-foreground: 217 33% 17%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 30%;
+    --input: 217 33% 25%;
+    --ring: 174 60% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
